@@ -1,0 +1,76 @@
+WAP to find a num is palindrome or not
+
+package poly;
+
+import java.util.Scanner;
+
+public class calc_02 extends calc{
+	
+	public void sum_of_digit() {
+		
+		int num,r,temp,sum=0;
+		
+		System.out.println("Enter a num:");
+		
+		Scanner sc=new Scanner(System.in);
+		num=sc.nextInt();
+		temp=num;
+		while(num>0) {
+			r=num%10;
+			sum=(sum*10)+r;
+			num=num/10;
+			
+					
+		}
+		if(temp==sum) {
+			System.out.println("palindrome num");
+		}else {
+			System.out.println("not a palindrome num");
+		}
+	}
+
+}
+-----------------------------------------------------------
+WAP to find Sum of digit
+
+package poly;
+
+import java.util.Scanner;
+
+public class calc {
+	
+	public  void  sum_of_digit() {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("enter a number :");
+	int num,digit,sum=0;
+	num=sc.nextInt();
+	while(num>0) {
+		digit=num%10;
+		sum=sum+digit;
+		num=num/10;
+		
+	}
+	System.out.println("Sum of number:" +sum);
+	
+	
+	}
+}
+-------------------------------------------------------------
+
+package poly;
+
+public class demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		calc_02 obj=new calc_02();
+		calc obj1=new calc();
+		obj.sum_of_digit();
+		obj1.sum_of_digit();
+
+	}
+
+}
